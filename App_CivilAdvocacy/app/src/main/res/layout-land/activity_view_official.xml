@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OfficialActivityView">
+
+    <TextView
+        android:id="@+id/OffViewLocnText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#733ABA"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/OffViewNameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/OffViewImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OffViewLocnText" />
+
+    <ImageView
+        android:id="@+id/OffViewImg"
+        android:layout_width="169dp"
+        android:layout_height="227dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onPhotoClick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OffViewParty"
+        app:srcCompat="@drawable/missing" />
+
+    <TextView
+        android:id="@+id/OffViewTittle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/OffViewImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OffViewNameText" />
+
+    <TextView
+        android:id="@+id/OffViewParty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/OffViewImg"
+        app:layout_constraintStart_toStartOf="@+id/OffViewImg"
+        app:layout_constraintTop_toBottomOf="@+id/OffViewLocnText" />
+
+    <ImageView
+        android:id="@+id/FacbkImgView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="72dp"
+        android:onClick="clickFacebook"
+        app:layout_constraintBottom_toBottomOf="@+id/OffViewImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/facebook" />
+
+    <ImageView
+        android:id="@+id/YTImgView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:onClick="youTubeClicked"
+        app:layout_constraintBottom_toBottomOf="@+id/OffViewImg"
+        app:layout_constraintEnd_toStartOf="@+id/TwitImgView"
+        app:layout_constraintStart_toEndOf="@+id/FacbkImgView"
+        app:srcCompat="@drawable/youtube" />
+
+    <ImageView
+        android:id="@+id/TwitImgView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="68dp"
+        android:onClick="clickTwitter"
+        app:layout_constraintBottom_toBottomOf="@+id/OffViewImg"
+        app:layout_constraintEnd_toStartOf="@+id/OffViewImg"
+        app:srcCompat="@drawable/twitter" />
+
+    <ImageView
+        android:id="@+id/imageViewParty"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:onClick="onPartyClick"
+        app:layout_constraintBottom_toBottomOf="@+id/OffViewImg"
+        app:layout_constraintEnd_toEndOf="@+id/OffViewImg"
+        app:layout_constraintStart_toStartOf="@+id/OffViewImg"
+        app:srcCompat="@drawable/dem_logo" />
+
+    <TextView
+        android:id="@+id/textViewAddressVOStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Address:"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OffViewTittle" />
+
+    <TextView
+        android:id="@+id/textViewAddressVO"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="clickMap"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/OffViewImg"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/textViewAddressVOStatic" />
+
+    <TextView
+        android:id="@+id/textViewPhoneVOStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Phone:"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddressVO" />
+
+    <TextView
+        android:id="@+id/textViewPhoneVO"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="clickCall"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/OffViewImg"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/textViewPhoneVOStatic" />
+
+    <TextView
+        android:id="@+id/textViewEmailVOStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Email:"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPhoneVO" />
+
+    <TextView
+        android:id="@+id/textViewEmailVO"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="clickEmail"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/OffViewImg"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/textViewEmailVOStatic" />
+
+    <TextView
+        android:id="@+id/textViewWebsiteVOStatic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Website:"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmailVO" />
+
+    <TextView
+        android:id="@+id/textViewWebsiteVO"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="clickWebsite"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/OffViewImg"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/textViewWebsiteVOStatic" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_begin="119dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
